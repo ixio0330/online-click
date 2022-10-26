@@ -41,8 +41,8 @@ describe('<StopWatchView />', () => {
     const recordButton = screen.getByRole('button', { name: '기록' });
     await userEvent.click(recordButton);
 
-    // row 선택 방법을 모른다.
-    // const recordTableRows = screen.getAllByRole('row', { name: '' });
+    const recordTableRows = screen.getAllByRole('row');
+    expect(recordTableRows.length).toBe(2);
   });
 
   it('중지 버튼을 누르면 시간 숫자가 멈추고, 초기화와 시작 버튼을 보여준다.', async () => {
