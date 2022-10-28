@@ -1,24 +1,35 @@
-import React, { ChangeEvent } from 'react';
+import React, { FormEvent, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
 
 export default function SelectLang() {
   const { t } = useTranslation();
-  const langEl = t('lang')
   const koEl = t('ko');
   const enEl = t('en');
+  const selectLangRef = useRef('ko');
 
-  function changeLang(e: ChangeEvent<HTMLSelectElement>) {
-    i18n.changeLanguage(e.target.value);
+  function changeLang(e: FormEvent) {
+    e.preventDefault();
+    i18n.changeLanguage(e.currentTarget.id);
+    selectLangRef.current = e.currentTarget.id;
   }
 
   return (
-    <div>
-      <label htmlFor="select_lang">{langEl}</label>
-      <select name="select_lang" id="select_lang" onChange={changeLang}>
-        <option value="ko">{koEl}</option>
-        <option value="en">{enEl}</option>
-      </select>
-    </div>
+    <form onSubmit={changeLang}>
+      <button 
+        id='ko' 
+        onClick={changeLang}
+        className={selectLangRef.current === 'ko' ? 'select_lang' : ''} 
+      >
+        {koEl}
+      </button>
+      <button 
+        id='en' 
+        onClick={changeLang}
+        className={selectLangRef.current === 'en' ? 'select_lang' : ''} 
+      >
+        {enEl}
+      </button>
+    </form>
   )
 }
