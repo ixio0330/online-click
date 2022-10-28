@@ -57,7 +57,7 @@ export default function Header() {
   
   return (
     <header>
-        <h1>online clock</h1>
+        <Link to='/'><h1>online clock</h1></Link>
         <div className="btn_wrap">
           <Link to={location.pathname === '/' ? '/stop-watch' : '/'}>{linkName}</Link>
           <button onClick={() => onChangeScreen('full')}>{fullScreenEl}</button>
