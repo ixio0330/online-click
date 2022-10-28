@@ -4,5 +4,9 @@
   "ko": "한국어",
   "presentTime": "Present time",
   "fullScreen": "Full Screent",
-  "fullScreenOff": "Full Screen Off"
+  "fullScreenOff": "Full Screen Off",
+  "start": "Start",
+  "restart": "Restart",
+  "stop": "Stop",
+  "reset": "Reset"
 }

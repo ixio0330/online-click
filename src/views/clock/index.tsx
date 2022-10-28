@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Header from '../../components/base/header';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import '../../i18n';
@@ -21,7 +20,6 @@ export default function ClockView() {
 
   return (
     <div>
-      <Header />
       <h2>{clockEl}{now}</h2>
     </div>
   )

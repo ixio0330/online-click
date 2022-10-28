@@ -4,5 +4,9 @@
   "ko": "한국어",
   "presentTime": "현재 시간",
   "fullScreen": "전체 화면",
-  "fullScreenOff": "전체 화면 해제"
+  "fullScreenOff": "전체 화면 해제",
+  "start": "시작",
+  "restart": "재시작",
+  "stop": "중지",
+  "reset": "초기화"
 }
