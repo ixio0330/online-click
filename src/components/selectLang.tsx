@@ -1,11 +1,7 @@
 import React, { FormEvent, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
 
 export default function SelectLang() {
-  const { t } = useTranslation();
-  const koEl = t('ko');
-  const enEl = t('en');
   const selectLangRef = useRef('ko');
 
   function changeLang(e: FormEvent) {
@@ -21,14 +17,15 @@ export default function SelectLang() {
         onClick={changeLang}
         className={selectLangRef.current === 'ko' ? 'select_lang' : ''} 
       >
-        {koEl}
+        KO
       </button>
+      <span>|</span>
       <button 
         id='en' 
         onClick={changeLang}
         className={selectLangRef.current === 'en' ? 'select_lang' : ''} 
       >
-        {enEl}
+        EN
       </button>
     </form>
   )

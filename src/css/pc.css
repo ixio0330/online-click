@@ -1,0 +1,41 @@
+@charset "UTC-8";
+
+:root {
+  --major: #FFBC3A;
+  --sub: #B8B8B8;
+}
+
+:root[color-theme='light'] {
+  --text: #000;
+  --color: #fff;
+ }
+
+:root[color-theme='dark'] {
+  --text: #DADADA;
+  --color: #2C2C2C; 
+}
+
+/***** common *****/
+
+body {
+  margin: 0;
+  background: var(--color);
+  color: var(--text);
+}
+
+button {
+  all: unset;
+}
+
+.button_yellow {
+  background-color: var(--major);
+}
+
+.button_gray {
+  background-color: var(--sub);
+}
+
+.select_lang {
+  color: var(--major);
+  font-weight: bold;
+}
