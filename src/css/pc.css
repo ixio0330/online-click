@@ -3,6 +3,7 @@
 :root {
   --major: #FFBC3A;
   --sub: #B8B8B8;
+  --action-button: #000;
 }
 
 :root[color-theme='light'] {
@@ -96,7 +97,7 @@ header .theme {
   font-size: 25px;
 }
 
-/*** header ***/
+/*** section common ***/
 
 section {
   display: flex;
@@ -106,10 +107,37 @@ section {
   height: 100vh;
 }
 
+/*** clock_view ***/
+
 .clock_view p {
   font-size: 30px;
 }
 
 .clock_view h2 {
   font-size: 50px;
+}
+
+/*** stopwatch_view ***/
+
+.stopwatch_view h2 {
+  font-size: 50px;
+}
+
+.stopwatch_view button {
+  padding: 20px 100px;
+  background-color: var(--major);
+  color: var(--action-button);
+  border-radius: 10px;
+}
+
+.stopwatch_view .negative {
+  background-color: var(--sub);
+}
+
+.stopwatch_view .btn_wrap {
+  display: flex;
+}
+
+.stopwatch_view .btn_wrap button {
+  margin: 0 20px;
 }

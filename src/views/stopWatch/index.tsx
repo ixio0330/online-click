@@ -18,16 +18,16 @@ export default function StopwatchView() {
 
   const buttonElement = 
   status === 'reset' ? <button onClick={() => handleStatus('start')}>{startEl}</button> : 
-  status === 'start' ? <button onClick={() => handleStatus('stop')}>{stopEl}</button> : 
-  <>
-    <button onClick={() => handleStatus('reset')}>{resetEl}</button>
+  status === 'start' ? <button className='negative' onClick={() => handleStatus('stop')}>{stopEl}</button> : 
+  <div className='btn_wrap'>
+    <button className='negative' onClick={() => handleStatus('reset')}>{resetEl}</button>
     <button onClick={() => handleStatus('start')}>{restartEl}</button>
-  </>
+  </div>
 
   return (
-    <div>
-      <p>{ watch }</p>
+    <section className='stopwatch_view'>
+      <h2>{ watch }</h2>
       { buttonElement }
-    </div>
+    </section>
   );
 }
