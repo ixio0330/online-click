@@ -37,7 +37,9 @@ export default function Header() {
         document.documentElement.requestFullscreen();
       },
       off() {
-        document.exitFullscreen();
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        }
       }
     }
     screenMode[type]();
