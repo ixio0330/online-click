@@ -18,8 +18,9 @@ export default function ClockView() {
   const clockEl = t('presentTime');
 
   return (
-    <div>
-      <h2>{clockEl}{now}</h2>
-    </div>
+    <section className='clock_view'>
+      <p>{clockEl}</p>
+      <h2>{now}</h2>
+    </section>
   )
 }

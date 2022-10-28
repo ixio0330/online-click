@@ -1,11 +1,11 @@
 import React from "react";
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import StopWatchView from "../../views/stopWatch";
+import StopwatchView from "../../views/stopwatch";
 
-describe('<StopWatchView />', () => {
+describe('<StopwatchView />', () => {
   it.only('시간과 시작 버튼을 보여준다.', () => {
-    render(<StopWatchView />);
+    render(<StopwatchView />);
 
     const timeEl = screen.getByText('00:00.00');
     const startButton = screen.getByRole('button', { name: '시작' });
@@ -15,7 +15,7 @@ describe('<StopWatchView />', () => {
   });
 
   it('시작을 누르면 시간 숫자가 올라가고 중지 버튼을 보여준다.', async () => {
-    render(<StopWatchView />);
+    render(<StopwatchView />);
 
     const timeEl = screen.getByText('00:00.00');
     const startButton = screen.getByRole('button', { name: '시작' });
@@ -31,7 +31,7 @@ describe('<StopWatchView />', () => {
   });
 
   it('중지 버튼을 누르면 시간 숫자가 멈추고, 초기화와 시작 버튼을 보여준다.', async () => {
-    render(<StopWatchView />);
+    render(<StopwatchView />);
 
     const startButton = screen.getByRole('button', { name: '시작' });
     await userEvent.click(startButton);
@@ -45,7 +45,7 @@ describe('<StopWatchView />', () => {
   });
 
   it('초기화를 누르면 숫자가 00:00.00으로 바뀌고 시작 버튼을 보여준다.', async () => {
-    render(<StopWatchView />);
+    render(<StopwatchView />);
 
     const timeEl = screen.getByText('00:00.00');
 

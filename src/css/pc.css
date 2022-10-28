@@ -27,6 +27,10 @@ button {
   all: unset;
 }
 
+a {
+  text-decoration: none;
+}
+
 .button_yellow {
   background-color: var(--major);
 }
@@ -38,4 +42,74 @@ button {
 .select_lang {
   color: var(--major);
   font-weight: bold;
+}
+
+/*** header ***/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header h1 {
+  color: var(--major);
+}
+
+header .btn_wrap {
+  display: flex;
+  align-items: center;
+}
+
+header .btn_wrap button {
+  margin: 0 30px;
+  transition: .2s;
+}
+
+header .btn_wrap button:active {
+  color: var(--major);
+}
+
+header .btn_wrap form {
+  margin-top: 15px;
+}
+
+header .btn_wrap form button {
+  margin: 0px 20px;
+}
+
+header .btn_wrap a {
+  margin: 0 20px;
+  color: var(--text);
+  transition: .2s;
+}
+
+header .btn_wrap a:active {
+  color: var(--major);
+}
+
+header .theme {
+  font-size: 25px;
+}
+
+/*** header ***/
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.clock_view p {
+  font-size: 30px;
+}
+
+.clock_view h2 {
+  font-size: 50px;
 }

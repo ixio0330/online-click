@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SelectLang from "./selectLang";
 
@@ -47,18 +48,23 @@ export default function Header() {
 
   const fullScreenEl = t('fullScreen');
   const fullScreenOffEl = t('fullScreenOff');
+  const clockEl = t('clock');
+  const stopwatchEl = t('stopwatch');
+
+  const location = useLocation();
+
+  const linkName = location.pathname === '/' ? stopwatchEl : clockEl;
   
   return (
     <header>
-      <h1>⌚️</h1>
-      <div className="control_wrap">
+        <h1>online clock</h1>
         <div className="btn_wrap">
+          <Link to={location.pathname === '/' ? '/stop-watch' : '/'}>{linkName}</Link>
           <button onClick={() => onChangeScreen('full')}>{fullScreenEl}</button>
           <button onClick={() => onChangeScreen('off')}>{fullScreenOffEl}</button>
+          <SelectLang />
+          <button className="theme" onClick={changeThemeTarget}>{targetTheme}</button>
         </div>
-        <SelectLang />
-        <button onClick={changeThemeTarget}>{targetTheme}</button>
-      </div>
     </header>
   )
 }

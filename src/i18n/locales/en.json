@@ -1,4 +1,6 @@
 {
+  "clock": "Clock",
+  "stopwatch": "Stopwatch",
   "presentTime": "Present time",
   "fullScreen": "Full Screent",
   "fullScreenOff": "Full Screen Off",

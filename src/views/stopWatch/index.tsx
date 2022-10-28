@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import useStopWatch, { StopWatchStatus } from '../../hooks/useStopWatch';
 import { useTranslation } from 'react-i18next';
 
-export default function StopWatchView() {
+export default function StopwatchView() {
   const [status, setStatus] = useState('reset' as StopWatchStatus);
   const { watch } = useStopWatch({ status });
   const { t } = useTranslation();

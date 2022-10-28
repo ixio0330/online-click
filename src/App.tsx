@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 
 const ClockView = lazy(() => import('./views/clock'));
-const StopWatchView = lazy(() => import('./views/stopWatch'));
+const StopWatchView = lazy(() => import('./views/stopwatch'));
 
 export default function App() {
   return (
