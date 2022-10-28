@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
-import i18n from "@/i18n";
+import SelectLang from "./selectLang";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -23,9 +23,12 @@ export default function Header() {
   return (
     <header>
       <h1>⌚️</h1>
-      <div className="btn_wrap">
-        <button onClick={() => onChangeScreen('full')}>{fullScreenEl}</button>
-        <button onClick={() => onChangeScreen('off')}>{fullScreenOffEl}</button>
+      <div className="control_wrap">
+        <div className="btn_wrap">
+          <button onClick={() => onChangeScreen('full')}>{fullScreenEl}</button>
+          <button onClick={() => onChangeScreen('off')}>{fullScreenOffEl}</button>
+        </div>
+        <SelectLang />
       </div>
     </header>
   )
