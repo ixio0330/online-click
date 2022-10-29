@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const MODE = process.env.NODE_ENV_MODE || 'development';
 
@@ -98,6 +99,12 @@ const config = {
       new MiniCssExtractPlugin({
         filename: 'static/css/[name].css',
       }),
+      new CopyPlugin({
+        patterns: [
+          { from: path.resolve(__dirname, 'public/site.webmanifest') },
+          { from: path.resolve(__dirname, 'public/favicon'), to: './favicon' }
+        ]
+      })
     ],
   },
 };
