@@ -6,12 +6,6 @@ function makeTime(time: number) {
 
 export type StopWatchStatus = 'start' | 'stop' | 'reset';
 
-interface Records {
-  idx: number;
-  record: string;
-  fulltime: string;
-}
-
 interface StopWatchProps {
   status: StopWatchStatus
 }
