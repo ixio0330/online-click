@@ -145,3 +145,24 @@ section {
 .stopwatch_view .btn_wrap button {
   margin: 0 20px;
 }
+
+/*** notfound_view ***/
+
+.notfound_view {
+  color: var(--major);
+  font-family: 'Timmana', sans-serif;
+}
+
+.notfound_view h3 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.notfound_view h2 {
+  font-size: 100px;
+  margin: 0;
+}
+
+.notfound_view a {
+  color: var(--text);
+}

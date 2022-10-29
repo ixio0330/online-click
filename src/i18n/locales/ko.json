@@ -7,5 +7,6 @@
   "start": "시작",
   "restart": "재시작",
   "stop": "중지",
-  "reset": "초기화"
+  "reset": "초기화",
+  "goHome": "홈으로 이동하기"
 }

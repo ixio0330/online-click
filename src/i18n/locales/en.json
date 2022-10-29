@@ -7,5 +7,6 @@
   "start": "Start",
   "restart": "Restart",
   "stop": "Stop",
-  "reset": "Reset"
+  "reset": "Reset",
+  "goHome": "Go Home"
 }
