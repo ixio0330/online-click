@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import StopwatchView from "../../views/stopwatch";
 
 describe('<StopwatchView />', () => {
-  it.only('시간과 시작 버튼을 보여준다.', () => {
+  it('시간과 시작 버튼을 보여준다.', () => {
     render(<StopwatchView />);
 
     const timeEl = screen.getByText('00:00.00');
@@ -30,7 +30,7 @@ describe('<StopwatchView />', () => {
     expect(stopButton).toBeInTheDocument();
   });
 
-  it('중지 버튼을 누르면 시간 숫자가 멈추고, 초기화와 시작 버튼을 보여준다.', async () => {
+  it('중지 버튼을 누르면 시간 숫자가 멈추고, 초기화와 재시작 버튼을 보여준다.', async () => {
     render(<StopwatchView />);
 
     const startButton = screen.getByRole('button', { name: '시작' });
@@ -39,8 +39,9 @@ describe('<StopwatchView />', () => {
     const stopButton = screen.getByRole('button', { name: '중지' });
     await userEvent.click(stopButton);
 
+    const restartButton = screen.getByRole('button', { name: '재시작' });
     const resetButton = screen.getByRole('button', { name: '초기화' });
-    expect(startButton).toBeInTheDocument();
+    expect(restartButton).toBeInTheDocument();
     expect(resetButton).toBeInTheDocument();
   });
 
@@ -59,6 +60,8 @@ describe('<StopwatchView />', () => {
     await userEvent.click(resetButton);
 
     expect(timeEl).toHaveTextContent('00:00.00');
-    expect(startButton).toBeInTheDocument();
+
+    const reRenderStartButton = screen.getByRole('button', { name: '시작' });
+    expect(reRenderStartButton).toBeInTheDocument();
   });
 });

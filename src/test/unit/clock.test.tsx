@@ -7,7 +7,7 @@ describe('<ClockView />', () => {
     render(<ClockView />);
 
     const now = new Date();
-    const clock = screen.getByText('현재 시간', { exact: false });
+    const clock = screen.getByRole('heading', { level: 2 });
     expect(clock).toHaveTextContent(now.toLocaleString());
   });
 });
