@@ -46,4 +46,4 @@ node_moduels가 설치되어 있지 않으면 실행되지 않습니다. npm i �
 
 <h3>Review</h3>
 
-[online clock}(https://velog.io/@seo__namu/online-clock-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9B%84%EA%B8%B0) 프로젝트 후기에 개발 후기를 기록했습니다.
+[online clock](https://velog.io/@seo__namu/online-clock-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9B%84%EA%B8%B0) 프로젝트 후기에 개발 후기를 기록했습니다.
